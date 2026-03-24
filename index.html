@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ff9aa2);
+    overflow-x: hidden;
+    text-align: center;
+    color: white;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    animation: float 6s linear infinite;
+}
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Button */
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4b5c;
+    color: #fff;
+    text-shadow:0 0 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* NO button moves */
+#noBtn {
+    position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-love.mp3">
+</audio>
+
+<!-- FLOATING HEARTS -->
+<script>
+for (let i = 0; i < 30; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💖";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (Math.random()*20+10)+"px";
+    h.style.animationDuration = (Math.random()*3+3)+"s";
+    document.body.appendChild(h);
+}
+</script>
+
+<!-- SECTION 1 -->
+<div class="section">
+<div class="card">
+<h1>I'm Sorry 🥺</h1>
+<p>
+I know I hurt you… and I regret it deeply.  
+You were my safe place, and I messed up something so beautiful.
+</p>
+</div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+<div class="card">
+<h1>I Love You Ankuuuu❤️</h1>
+
+<img src="photo.jpeg" width="220" style="border-radius:15px; margin-top:15px;">
+<p>
+Even now… nothing feels right without you.  
+I miss us, our talks, our moments… everything.
+I" am really sorry for what i did and i am ashamed and embarrashed of it & i know i hurted u very badly.
+But this time i"ll make sure to do everything right without making any chaos it's not just the word but action will also be seen .
+Trust mee for once.
+</p>
+</div>
+</div>
+
+<!-- SECTION 3 (LOVE STORY) -->
+<div class="section">
+<div class="card">
+<h1>Our Story 📖</h1>
+<p>
+From strangers… to something so special whom  i never thought will love so much  💫  
+Through distance, fights, and time…  
+my heart still chooses you.  
+</p>
+</div>
+</div>
+
+<!-- SECTION 4 (FINAL MESSAGE) -->
+<div class="section">
+<div class="card">
+<h1>Please… 💌</h1>
+<p>
+I don’t want to force anything…  
+I just want one chance to fix everything.  
+</p>
+
+<button onclick="yesClick()">Yes ❤️</button>
+<button id="noBtn" onmouseover="moveNo()">No 💔</button>
+
+<p id="result"></p>
+</div>
+</div>
+
+<script>
+function yesClick() {
+    document.getElementById("result").innerHTML =
+    "You just made me the happiest person.I found u to be my biggest supporter & my safest place in my entire  life till now. ❤️🥺";
+     For once please come back withou letting ur pride ,respect & angry win.
+     
+}
+
+function moveNo() {
+    let btn = document.getElementById("noBtn");
+    btn.style.left = Math.random()*200 + "px";
+    btn.style.top = Math.random()*100 + "px";
+}
+</script>
+
+</body>
+</html>
